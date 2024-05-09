@@ -1,0 +1,63 @@
+body {
+        margin: auto;
+        padding: 0%;
+        background-image: url(../Assert/back.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;        
+}
+img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+.header h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: darkblue;
+    font-style: initial;
+    text-align: center;
+}
+
+h2 {
+    color: #323233;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+p {
+    color: #323233;    ;
+    font-style: italic;
+}
+label {
+    color: #041b21;
+}
+input[type="submit"] {
+    background: linear-gradient(to right, #ff105e, #1b1a19);
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px 50px;
+    cursor: pointer;
+}
+.link {
+    overflow: hidden;
+    background-color: #333;
+  }
+.link a {
+    float: right;
+    display: block;
+    color: steelblue;
+    text-align: center;
+    padding: 18px 20px;
+    text-decoration: none;
+}
+.link a:hover {
+    background-color: #004554;
+    color: blanchedalmond;
+}
+ .header  {
+    text-align: center;
+ }
+
+
+
+

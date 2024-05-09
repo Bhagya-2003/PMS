@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    background-image: linear-gradient(45deg, #5b3351 0%, #18e1e4ab 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+h1 {
+    color: darkblue;
+    font-style: initial;
+    text-align: left;
+}
+.slide {
+    text-align: left;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.slide a {
+    float: left;
+    color: steelblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+img {
+    border-radius: 50%;
+}
+
+ button{
+    text-align: right;
+    font-size:10px;
+    padding:10px 30px;
+    border-radius:20px;
+    color:black;
+}
+label {
+    color: #004554;
+}
+
+input {
+    background-color:darksalmon;
+    color: black;
+    padding: 5px 20px;
+    border: black;
+    border-width: medium;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background-color: darkkhaki;
+    color: black;
+    padding: 10px 20px;
+    border-bottom-color: black;
+    border-radius: 50px 50px;
+    cursor: pointer;
+    
+}
+table {
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding:8px;
+    width: 150px;
+    text-align: center;
+}
+th {
+    background-color: #f2f2f2;
+
+}
+.medicine {
+    text-align: right;
+    padding:8px;
+    width: 1450px;
+    color: aqua;
+}
+.customer {
+    text-align: right;
+    padding:8px;
+    width: 1450px;
+    color: aqua;
+}

@@ -1,0 +1,92 @@
+
+<html>
+
+<head>
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="..\css\styles2.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<style>
+   
+    .slide {
+        text-align: left;
+        overflow: hidden;
+        background-color: #333;
+    }
+    
+    .slide a {
+        float: left;
+        color: steelblue;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    
+    .container {
+            max-width: 430px;
+            margin: 30px;
+            padding: 20px;
+            background-color: rgb(47, 50, 50);
+            text-align: left;
+    }
+    img {
+        height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    }
+    form {
+            text-align: left;
+    }
+    h3 {
+            color: rgb(231, 231, 237);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+    }p {
+    color: #818186;    ;
+    font-style: italic;
+}
+    </style>
+</head>
+<body><br>
+    <div class="slide">
+        <a href="homelogin.html">HOME</a>
+        <a> > </a>
+        <a href="profile.html">PROFILE</a>
+        <a> > </a>
+        <a href="editprofile.html">EDIT PROFILE</a></p>
+      </div>
+    </div>
+    <form class="container" action="profile.html" method="POST">
+        <img src="..\Assert\profile.jpg" alt="Profile Picture"  height="90px" width="90px">
+        <h3>Bhagya Thavamani</h3>                                                                               
+           <P><U>Edit Profile</U></P>
+            <label for="roll">Roll:</label>
+            <input type="text" id="roll" placeholder="Edit Your Roll" name="roll" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Edit Mail Address" name="email" required><br><br>
+            
+            <label for="phone">Phone:</label>
+            <input type="number" id="phone" placeholder="+91-987-654-3210" name="phone" pattern="{0-9}" title="please enter 10 digite only" required=""><br><br>
+ 
+            <label for="address">Address:</label>
+            <input type="text" id="address" placeholder="Edit Your Address" name="address" required><br><br>
+ 
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="username" name="username" required><br><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="password" name="password" required><br><br>
+
+            <label for="comformpassword">Comform Password:</label>
+            <input type="password" id="comformpassword" placeholder="comformpassword" name="comformpassword" required><br><br>
+            
+            <a href="profile.html">
+                <input type="submit" value="&#9755;SAVE">
+            </a>
+        </form>
+    </div>
+    <script src="../js/script2.js"></script>
+    
+</body>
+
+</html>

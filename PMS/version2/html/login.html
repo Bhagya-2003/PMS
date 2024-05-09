@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Pharmacy Management System - Login</title>
+    <link rel="stylesheet" href="..\css\styles1.css">
+</head>
+
+<body align="center"><br><br>
+    
+        <h1>Welcome to Pharmacy Management System</h1>
+        <form action="homelogin.html" method="POST">
+            <div><br><br>
+                <h2>Login</h2>
+                 <label for="username">Username:</label>
+                 <input type="text" id="username" placeholder="username" name="username" required><br><br>
+                 <label for="password">Password:</label>
+                 <input type="password" id="password" placeholder="password" name="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,12}$"
+                 title="Password contains at least one uppercase letter, &#10; one
+               lowercase letter, &#10; one digit and one special character &#10;
+               Password length should be between 6 to 12"
+               /><br><br>
+               <div id="btn">
+                 <a href="homelogin.html">
+                    <input type="submit" value="&#9755;LOGIN">
+                 </a>
+                </div> 
+            </div>     
+        </form>   
+</body>
+
+</html>

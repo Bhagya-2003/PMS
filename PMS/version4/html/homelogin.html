@@ -1,0 +1,380 @@
+<html>
+<head>
+    <title>Pharmacy Management System</title>
+    <link rel="stylesheet" href="..\css\styles1.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">   
+    <script src='https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js'></script>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+ .subContainer {
+    width: calc(100% - 220px);
+    height: 100%;
+    /* padding-bottom: 10px 0; */
+}
+.actionButtons{
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.topContent{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+ .summaryCard{
+    width: 170px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 5px 8px 39px -2px rgba(0,0,0,0.22);
+    -webkit-box-shadow: 5px 8px 39px -2px rgba(0,0,0,0.22);
+    -moz-box-shadow: 5px 8px 39px -2px rgba(0,0,0,0.22);
+}
+.summaryCard.cust{
+    background-color:#339792;
+}
+.summaryCard.manu{
+    background-color: #8258CF;
+}
+.summaryCard.med{
+    background-color: #739157;
+}
+.summaryCard.out{
+    background-color: #F9C56E;
+}
+.summaryCard.expired{
+    background-color: #F0948A;
+}
+.summaryCard.invoice{
+    background-color: #6BABBC;
+}
+.bottomContent{
+    width: 100%;
+    height: calc(100% - 210px);
+    padding: 50px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.one{
+    width: 770px ;
+    height: 400px;
+    padding: 25px 10px;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 5px 8px 39px -2px rgba(0,0,0,0.22);
+    -webkit-box-shadow: 5px 8px 39px -2px rgba(0,0,0,0.22);
+    -moz-box-shadow: 5px 8px 39px -2px rgba(0,0,0,0.22);
+}
+
+canvas {
+    display: block;
+     box-sizing: border-box;
+      height: 600px; 
+      width: 700px;
+}
+.one::before, .two::before{
+    content: "";
+    position:absolute;
+    margin:-35px;
+    width:40px;
+    height:40px;
+    transform:rotate(35deg);
+    background-color:#02afd7; /* to see where it is */
+}
+.bottomContent h4{
+padding-left: 10px;
+color: black;
+}
+
+.two{
+    width: 340px;
+    color: black;
+    position: relative;
+    padding:25px 10px ;
+    background-color: rgb(247, 245, 245);
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 5px 8px 39px -2px rgba(0,0,0,0.22);
+    -webkit-box-shadow: 5px 8px 39px -2px rgba(0,0,0,0.22);
+    -moz-box-shadow: 5px 8px 39px -2px rgba(0,0,0,0.22);
+}
+.two table{
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: left;
+    margin: 30px 0;
+}
+.two tr:nth-child(even){
+    background-color: #dddddd;
+}
+.two th{
+    background-color: #3E454D;
+    color: rgb(240, 240, 240);
+    text-align: center;
+    border: 1px solid black;
+}
+.two td{
+    padding: 3px;
+    border: 1px solid black;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.footer-container{
+	max-width: 1170px;
+	margin:auto;
+}
+.footer-row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.footer-ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col .footer-ul .footer-li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col .footer-ul .footer-li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col .footer-ul .footer-li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 20px;
+	width: 100px;
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 5px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+
+}   
+span {
+    color: #bbbbbb;
+} 
+</style>
+</head>
+<body>
+    
+<div class="link">
+  <a href="home.html"><span class="glyphicon glyphicon-log-out"></span> LOGOUT</a>
+  <a href="profile.html"><span class="glyphicon glyphicon-user"></span> PROFILE</a>
+  <a href="staffs.html"><span class="glyphicon glyphicon-th-list"></span> STAFFS</a>
+  <a href="sales.html"><span class="glyphicon glyphicon-list-alt"></span> SALES</a>
+  <a href="customer.html"><span class="glyphicon glyphicon-list"></span> CUSTOMER</a>
+  <a href="medicine.html"><span class="glyphicon glyphicon-plus-sign"></span> MEDICINE</a>
+  <a href="home.html"><span class="glyphicon glyphicon-home"></span> HOME</a>
+</div>     
+<div class="header"> 
+  <h1><u>Pharmacy Management System</u></h1><br> 
+  </div>
+  <div class="subContainer">
+    <div class="topContent">
+        <div class="summaryCard cust">
+            <span>20</span>
+            <span>Total Medicines</span>
+        </div>
+        <div class="summaryCard manu">
+            <span>10</span>
+            <span>Total Customers</span>
+        </div>
+        <div class="summaryCard med">
+            <span>5</span>
+            <span>Total Staffs</span>
+        </div>
+        <div class="summaryCard out">
+            <span>8</span>
+            <span>Out Of Stock</span>
+        </div>
+        <div class="summaryCard expired">
+            <span>10</span>
+            <span>Expired</span>
+        </div>   
+    </div>
+    <div class="bottomContent">
+      <div  class="one"> 
+          <h4>Monthly Progress Report</h4>
+          <canvas id="myChart" width="376" height="435" >
+        </canvas>
+          
+      </div>
+      <div class="two"> 
+        <h4>Today's Progress Report</h4>
+        <table class="progressTable">
+            <tr>
+                <th>Today's Report</th>
+                <th>Amount</th>
+            </tr>
+            <tr>
+                <td>
+                    Total Sales
+                </td>
+                <td>
+                    $56700.09
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Total Purchase
+                </td>
+                <td>
+                    $678.002
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Cash Received
+                </td>
+                <td>
+                    $456702.34
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Invoice Due
+                </td>
+                <td>
+                    $0
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Total Service
+                </td>
+                <td>
+                    $03
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+</div>
+
+
+</div>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-row">
+            <div class="footer-col">
+                <h4>All Medicine</h4>
+                <ul class="footer-ul">
+                    <li class="footer-li"><a href="#">Health & Care</a></li>
+                    <li class="footer-li"><a href="#">Beauty Care</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Doctors</h4>
+                <ul class="footer-ul">
+                    <li class="footer-li"><a href="#">Physiotherapy</a></li>
+                    <li class="footer-li"><a href="#">Heart Specialist</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Hospital</h4>
+                <ul class="footer-ul">
+                    <li class="footer-li"><a href="#">Government Listed</a></li>
+                    <li class="footer-li"><a href="#">Top Private</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>contact us</h4>
+                <div class="footer-ul">
+                    <li class="footer-li"><a href="#">+919876543210</a></li></a>
+                    <li class="footer-li"><a href="#">Pharmacy@gmail</a></li></a>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Jan','Feb','Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep','Oct', 'Nov', 'Dec', ],
+            datasets: [{
+                label: 'Sales',
+                data: [12, 19, 3, 5, 2, 3,12, 3, 5, 2, 3,5,],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            maintainAspectRatio: false,
+        }
+    });
+    </script>
+
+
+</body>
+</html>
+    

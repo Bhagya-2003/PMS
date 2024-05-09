@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(../Assert/back.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.title h3 {
+    color: rgb(44, 44, 48);
+    font-style: initial;
+    text-align: left;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+ .medicine {
+    text-align: right;
+    padding:8px;
+    width: 1450px;
+    color: rgb(96, 99, 99);
+ }
+ .customer {
+    text-align: right;
+    padding:8px;
+    width: 1450px;
+    color: rgb(91, 96, 96);
+}
+
+ button{
+    text-align: right;
+    font-size:10px;
+    padding:10px 30px;
+    border-radius:20px;
+    color:black;
+}
+label {
+    color: #bac9cd;
+}
+
+input {
+    background-color:darksalmon;
+    color: black;
+    padding: 0 10px ;
+    border: black;
+    border-width: 10px;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background-color: darkkhaki;
+    color: black;
+    padding: 10px 20px;
+    border-bottom-color: black;
+    border-radius: 50px 50px;
+    cursor: pointer;
+    
+}
+

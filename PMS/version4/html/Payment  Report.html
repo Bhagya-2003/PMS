@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Pharmacy Building and Payment</title>
+</head>
+<body>
+    <br><br><br>
+     <div>
+        <a href="homelogin.html">HOME</a>>
+        <a href="medicine.html"> INFORMATION</a>>
+        <a href="addmedicine.html">ADD MEDICINE</a></p>
+      </div>
+<br><br>  
+    <h1>Pharmacy Building and Payment</h1>
+    <form action="/submit_payment" method="post">
+        <label for="patient_name">Patient Name:</label>
+        <input type="text" id="patient_name" name="patient_name" required>
+        <br><br>
+        <label for="medication_name">Medication Name:</label>
+        <input type="text" id="medication_name" name="medication_name" required>
+        <br><br>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required>
+        <br><br>
+        <label for="total_amount">Total Amount:</label>
+        <input type="text" id="total_amount" name="total_amount" required>
+        <br><br>
+        <label for="payment_method">Payment Method:</label>
+        <select id="payment_method" name="payment_method" required>
+            <option value="">Select Payment Method</option>
+            <option value="cash">Cash</option>
+            <option value="credit_card">Credit Card</option>
+            <option value="debit_card">Debit Card</option>
+        </select>
+
+        <input type="submit" value="Submit Payment">
+    </form>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+<head> 
+    <title>Pharmacy Management System</title>
+    <link rel="iocn" href="..\asset\phar2.jpg"/>
+    <link rel="stylesheet" href="..\css\styles1.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">   
+</action>
+</head>
+<style>
+    .tabs {
+            width: 400px;
+            margin: 100px auto;
+            position: relative;
+            
+            border-radius: 5px;
+            
+        }
+        .toggle-btn {
+            padding: 10px 30px;
+            cursor: pointer;
+            background: transparent;
+            border: 0;
+            outline: none;
+            position: relative;
+            border-radius: 30px;
+            background: linear-gradient(to right, #ff105e, #1b1a19);
+        }
+        .form {
+            top: 180px;
+            position: absolute;
+            width: 280px;
+            transition: .5s;
+        }
+
+</style>
+<body>
+    <br>
+    <br>
+    <center>
+    <div>
+         <img src="..\Assert\logo.jpg" alt="logo" width="150" height="100">
+    </div ><div class="header">       
+        <h1>WELCOME TO PHARMACY MANAGEMENT SYSTEM</h1>
+        <p>This system helps manage inventory, sales, and customer information efficiently.</p>
+    <br><br><br><br><br>
+    <form class="login-form" action="login.html" method="POST"></form>
+        <div class="tabs">
+          <div id="btn">
+            <a href="login.html">
+          <button type="button" class="toggle-btn" onclick="login()">Login</button>
+          </a>
+           <a href="register.html">
+          <button type="button" class="toggle-btn" onclick="registration()">Register</button>
+        </a>
+        </div>
+        </div>
+    </form>
+    </center>
+    
+</body>
+</html>

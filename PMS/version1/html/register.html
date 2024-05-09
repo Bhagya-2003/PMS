@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Signup</title>
+</head>
+
+<body>
+    <form action="home.html" method="post">
+      <center>
+        <h1>PHARMACY MANAGEMENT</h1>
+        <h2>ONE TIME REGISTER</h2>
+        <h3>Enter necessary pharmacy details</h3>
+      
+        <div>
+
+            <input type="text" id="name" name="pharmaname" placeholder="pharmacy name"  required>
+        </div>
+        <br>
+
+        <div>
+
+            <input type="text" id="address" name="address" placeholder="address" required ">
+        </div>
+        <br>
+
+        <div>
+
+            <input type="email" id="email" name="email" placeholder="email" required>
+        </div>
+        <br>
+        <div>
+            <input type="text" id="contactnumber" name="contactnumber"  required placeholder="contact number">
+
+        </div>
+        <br>
+        <div>
+            <input type="text" id="username" name="username"  required placeholder="enter username">
+
+        </div>
+        <br>
+        <div>
+            <input type="password" id="password" name="password"  required placeholder="enter password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,12}$"
+            title="Password contains at least one uppercase letter, &#10; one
+          lowercase letter, &#10; one digit and one special character &#10;
+          Password length should be between 6 to 12">
+
+        </div>
+        <br>
+
+        <div>
+
+            <input type="password" id="passwordconfirmation" name="passwordconfirm" required placeholder="confirm password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,12}$"
+            title="Password contains at least one uppercase letter, &#10; one
+          lowercase letter, &#10; one digit and one special character &#10;
+          Password length should be between 6 to 12">
+        </div><br>
+        <a href="home.html">
+            <input type="submit" value="&#9755;REGISTER"><br>
+         </a><br>
+    </center>
+    </form>
+
+
+</body>
+
+</html>

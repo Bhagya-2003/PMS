@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <title>Pharmacy Management System - Login</title>
+    <link rel="stylesheet" href="..\css\styles1.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
+<style>
+.login-container {
+          max-width: 400px;
+          margin: 100px auto;
+          padding: 20px;
+          text-align: center;
+          background: linear-gradient(to right, #ff105e, #ffad05);;
+          border-radius: 5px;
+          box-shadow: 0 2px 5px rgba(45deg, #7693aa, 0%, #1734f5);
+      }
+.toggle-btn {
+                  padding: 10px 30px;
+                  cursor: pointer;
+                  background: transparent;
+                  border: 0;
+                  outline: none;
+                  position: relative;
+                  border-radius: 30px;
+                  background: linear-gradient(to right, #ff105e, #1b1a19);
+              }
+.FPSI a
+	{
+		display: inline-block;
+		padding: 5px;
+
+	}
+</style>
+</head>
+<body align="center"><br><br>
+  <div class="header">
+        <h1>Welcome to Pharmacy Management System</h1>
+        <form id="login-form" action="homelogin.html" method="POST">
+            <div class="login-container">
+              <br><br>
+                 <label for="username">Username:</label>
+                 <input type="text" id="username" placeholder="username" name="username" required=""><br><br>
+                 <label for="password">Password:</label>
+                 <input type="password" id="password" placeholder="password" name="password" required="" >
+        <br><br>
+                <button type="submit">Login</button>
+            </div>  
+            
+           
+        </form>
+       </div> 
+        <div class="FPSI">
+          <a href="#ForgotPassword">Forgot Password</a><span style="color: blue; margin-left:5px">/</span>
+          <a href="register.html">Signup</a>
+          </div>    
+          <script src="../js/script1.js"> </script> 
+</body>
+
+</html>
